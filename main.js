@@ -68,7 +68,7 @@ function resetCount() {
 	startTime = 0;
 	clearInterval(interval);
 
-	$count.text("0:00");
+	$count.text("0.00");
 	$runk.text("");
 	$count.removeClass("hide");
 	$count.stop();
@@ -77,7 +77,7 @@ function resetCount() {
 }
 
 function updateCount(ms) {
-	$count.text( (ms/1000^0) + ":" + ("0"+(ms%1000/10^0)).slice(-2) );
+	$count.text( (ms/1000^0) + "." + ("0"+(ms%1000/10^0)).slice(-2) );
 }
 
 function getRunkMessage(ms) {
@@ -103,7 +103,7 @@ function getTweetLink(ms) {
 	var tweetLink = "https://twitter.com/intent/tweet?url=${URL}&text=${TEXT}",
 		url = "http://totoraj930.github.io/10sec",
 		text = "10秒で止めるやつ！\n結果は、『${RESULT}』でした！\nみんなも挑戦しよう";
-	text = text.replace("${RESULT}", (ms/1000^0) + ":" + ("0"+(ms%1000/10^0)).slice(-2));
+	text = text.replace("${RESULT}", (ms/1000^0) + "." + ("0"+(ms%1000/10^0)).slice(-2));
 	url = encodeURIComponent(url);
 	text = encodeURIComponent(text);
 	tweetLink = tweetLink.replace("${URL}", url).replace("${TEXT}", text);
