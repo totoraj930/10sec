@@ -89,9 +89,9 @@ function getRunkMessage(ms) {
 		msg = "すこしはやい！";
 	else if (9500 <= ms && ms < 10000)
 		msg = "おしい！";
-	else if (10000 <= ms && ms < 10009)
+	else if (10000 <= ms && ms < 10010)
 		msg = "ぴったり！！！";
-	else if (10009 <= ms && ms < 10500)
+	else if (10010 <= ms && ms < 10500)
 		msg = "おしい！";
 	else if (10500 <= ms && ms < 11000)
 		msg = "すこしおそい！";
