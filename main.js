@@ -20,18 +20,12 @@ function onClickButton(event) {
 	switch (status){
 		case "start":
 			startCount();
-			$(this).attr("data-status", "stop");
-			$(this).text("ストップ");
 			break;
 		case "stop":
 			stopCount();
-			$(this).attr("data-status", "reset");
-			$(this).text("リセット");
 			break;
 		default:
 			resetCount();
-			$(this).attr("data-status", "start");
-			$(this).text("スタート");
 			break;
 	}
 }
@@ -49,6 +43,8 @@ function startCount() {
 			clearInterval(interval);
 		}
 	}, 10);
+	$button.attr("data-status", "stop");
+	$button.text("ストップ");
 }
 
 function stopCount() {
@@ -63,6 +59,8 @@ function stopCount() {
 	$runk.text(getRunkMessage(ms));
 	$tweet[0].href = getTweetLink(ms);
 	$tweet.show();
+	$button.attr("data-status", "reset");
+	$button.text("リセット");
 }
 
 function resetCount() {
@@ -75,6 +73,8 @@ function resetCount() {
 	$count.stop();
 	$count.animate({"opacity": 100}, 1000);
 	$tweet.hide();
+	$button.attr("data-status", "start");
+	$button.text("スタート");
 }
 
 function updateCount(ms) {
