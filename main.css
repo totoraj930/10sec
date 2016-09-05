@@ -121,17 +121,21 @@ body {
 	top: 0;
 	left: 0;
 	background-color: #fff;
+	overflow-y: scroll
 }
 .about-body {
 	max-width: 500px;
 	margin: 2em auto;
+	padding: 0 .5em;
 	line-height: 2;
 }
 .about-body h1 {
 	font-size: 1.5em;
+	font-weight: bold;
 }
 .about-body h2 {
 	font-size: 1.1em;
+	font-weight: bold;
 }
 .about-body p {
 	margin-bottom: 1em;
