@@ -2,14 +2,14 @@ var startTime,
 	interval;
 var $count,
 	$button,
-	$runk,
+	$rank,
 	$tweet;
 var cheat = false;
 
 $(function() {
 	$count = $("#count");
 	$button = $("#button");
-	$runk = $("#runk");
+	$rank = $("#rank");
 	$tweet = $("#tweet");
 
 	$button.on("click", onClickButton);
@@ -56,7 +56,7 @@ function stopCount() {
 	$count.stop();
 	$count.animate({"opacity": 100}, 100);
 
-	$runk.text(getRunkMessage(ms));
+	$rank.text(getRankMessage(ms));
 	$tweet[0].href = getTweetLink(ms);
 	$tweet.show();
 	$button.attr("data-status", "reset");
@@ -68,7 +68,7 @@ function resetCount() {
 	clearInterval(interval);
 
 	$count.text("0.00");
-	$runk.text("");
+	$rank.text("");
 	$count.removeClass("hide");
 	$count.stop();
 	$count.animate({"opacity": 100}, 1000);
@@ -81,7 +81,7 @@ function updateCount(ms) {
 	$count.text( (ms/1000^0) + "." + ("0"+(ms%1000/10^0)).slice(-2) );
 }
 
-function getRunkMessage(ms) {
+function getRankMessage(ms) {
 	var msg = "";
 	if (ms < 9000)
 		msg = "はやすぎ！";
