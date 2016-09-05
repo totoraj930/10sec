@@ -4,6 +4,7 @@ var $count,
 	$button,
 	$runk,
 	$tweet;
+var cheat = false;
 
 $(function() {
 	$count = $("#count");
@@ -40,11 +41,11 @@ function startCount() {
 	interval = setInterval(function() {
 		var ms = new Date().getTime() - startTime;
 		updateCount(ms);
-
-		if (!$count.hasClass("hide") && ms > 5*1000 && ms <= 6*1000) {
+		if (cheat && ms >= 10*1000) stopCount();
+		if (!cheat && !$count.hasClass("hide") && ms > 5*1000 && ms <= 6*1000) {
 			$count.addClass("hide");
 			$count.animate({"opacity": 0}, 500);
-		} else if (ms > 6*1000) {
+		} else if (!cheat && ms > 6*1000) {
 			clearInterval(interval);
 		}
 	}, 10);
