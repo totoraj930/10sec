@@ -26,7 +26,7 @@
 	<script src="main.js"></script>
 </head>
 <body>
-	<div class="wrap">
+	<section class="game wrap">
 		<h1 class="title">10秒で止めよう！</h1>
 		<div class="count-wrap">
 			<p id="count" class="count">0.00</p>
@@ -40,6 +40,40 @@
 		<div class="item-wrap">
 			<a id="tweet" class="tweet" href="https://twitter.com/intent/tweet" style="display:none" target="_blank">結果をツイートする</a>
 		</div>
-	</div>
+		<a href="javascript:void(0)" class="about-open">説明</a>
+	</section>
+	<section class="about" style="display:none">
+		<div class="about-body">
+			<h1>説明</h1>
+			<p>
+				10秒でカウントを止めるゲームやで。別に他の遊び方をしても構わんよ。
+			</p>
+			<p>
+				(なんか0.00秒で止めるつわものもいるみたいやで。)
+			</p>
+			<h2>なんでつくったの</h2>
+			<p>
+				Twitterで話題になってた「<a href="http://shindan.matchalarm.com/ma_ten_sec">10秒で止めろ！</a>」ってゲームのJavaScriptがひどくて環境によってカウントにズレが出る仕様だったので自作しました。
+			</p>
+			<p>
+				それなりに正確な計測ができているはずです。
+			</p>
+			<h2>ソースコード</h2>
+			<a href="https://github.com/totoraj930/10sec">https://github.com/totoraj930/10sec</a>
+			<h2>つくったひと</h2>
+			<a href="https://twitter.com/totoraj930">@totoraj930</a>
+			<p>バグとか問題があれば言ってくだされ。</p>
+
+		</div>
+		<div class="item-wrap"><a href="javascript:void(0)" class="about-close">閉じる</a></div>
+	</section>
+	<script>
+		$(".about-open").on("click", function() {
+			$(".about").fadeIn(200);
+		});
+		$(".about-close").on("click", function() {
+			$(".about").fadeOut(200);
+		});
+	</script>
 </body>
 </html>
