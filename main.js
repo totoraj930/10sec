@@ -102,7 +102,7 @@ function getRunkMessage(ms) {
 function getTweetLink(ms) {
 	var tweetLink = "https://twitter.com/intent/tweet?url=${URL}&text=${TEXT}",
 		url = "http://totoraj930.github.io/10sec",
-		text = "10秒で止めるやつ！\n結果は、『${RESULT}』でした！\nみんなも挑戦しよう";
+		text = "10秒で止めるやつ！\n結果は、『${RESULT}秒』でした！\nみんなも挑戦しよう";
 	text = text.replace("${RESULT}", (ms/1000^0) + "." + ("0"+(ms%1000/10^0)).slice(-2));
 	url = encodeURIComponent(url);
 	text = encodeURIComponent(text);
