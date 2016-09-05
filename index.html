@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>10秒で止めるやつ</title>
+	<!-- Color -->
+	<meta name="theme-color" content="#00a2e8">
+	<!-- OGP -->
+	<meta property="og:locale" content="ja_JP">
+	<meta property="og:title" content="10秒で止めるやつ">
+	<meta property="og:site_name" content="10秒で止めるやつ">
+	<meta property="og:description" content="カウンターを10秒ピッタリで止めるゲーム">
+	<meta property="og:type" content="site">
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:title" content="10秒で止めるやつ">
+	<meta name="twitter:description" content="カウンターを10秒ピッタリで止めるゲーム">
+	<meta name="twitter:image" content="http://totoraj930.github.io/10sec/icon.png">
+	<!-- Other -->
+	<link rel="canonical" href="http://totoraj930.github.io/10sec/"><!-- url正規化 -->
+	<link rel="shortcut icon" href="favicon.ico"><!-- favicon -->
+	<link rel="apple-touch-icon" href="icon.png"><!-- icon -->
+	<link rel="stylesheet" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script src="main.js"></script>
+</head>
+<body>
+	<div class="wrap">
+		<h1 class="title">10秒で止めよう！</h1>
+		<div class="count-wrap">
+			<p id="count" class="count">0:00</p>
+		</div>
+		<div class="item-wrap">
+			<button id="button" class="button" data-status="start">スタート</button>
+		</div>
+		<div class="item-wrap">
+			<p id="runk" class="runk"></p>
+		</div>
+		<div class="item-wrap">
+			<a id="tweet" class="tweet" href="https://twitter.com/intent/tweet" style="display:none" target="_blank">結果をツイートする</a>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,115 @@
+/* note 初期化処理 */
+*, *:before, *:after{
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body {
+	color: #202020;
+	line-height: 1;
+	font-size: 16px;
+	font-family: "Helvetica Neue", "メイリオ", Meiryo, Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+iframe {
+	max-width: 100%;
+}
+img {
+	border: none;
+}
+.dummy {
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+body, html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+}
+
+.wrap {
+	max-width: 350px;
+	padding: .5em;
+}
+.title {
+	margin-bottom: 1em;
+	font-size: 1.5;
+	font-weight: bold;
+	text-align: center;
+}
+.count-wrap {
+	margin: 1em auto;
+	padding: .5em 1em;
+	box-shadow: inset 1px 1px 5px #555;
+	text-align: center;
+	overflow: hidden;
+}
+.count {
+	font-size: 2em;
+}
+
+.item-wrap {
+	margin: 1em 0;
+	text-align: center;
+}
+.runk {
+	font-size: 2em;
+	text-align: center;
+}
+.button {
+	display: inline-block;
+	width: 6em;
+	height: 6em;
+	background-color: #15bcfa;
+	background: linear-gradient(to bottom, #2ac3fc, #117fff);
+	color: #fff;
+	border-radius: 50%;
+	box-shadow: 1px 1px 5px #555;
+	text-shadow: 0 0 3px #202020;
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: "Helvetica Neue", "メイリオ", Meiryo, Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	line-height: 6em;
+	outline: none;
+	cursor: pointer;
+}
+.button:hover,
+.button:focus {
+	background-color: #ff063f;
+	background: linear-gradient(to bottom, #ff376d, #ff063f);
+}
+.button:active {
+	background: linear-gradient(to bottom, #ff063f, #ff376d);
+}
+.tweet {
+	display: inline-block;
+	padding: .8em 3em;
+	background-color: #1da1f2;
+	color: #fff;
+	border: 2px solid #1da1f2;
+	border-radius: 5px;
+	text-decoration: none;
+	transition: all 200ms;
+}
+.tweet:hover,
+.tweet:focus {
+	background-color: #fff;
+	color: #1da1f2;
+}
