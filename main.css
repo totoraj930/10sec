@@ -88,7 +88,11 @@ body {
 	font-family: "Helvetica Neue", "メイリオ", Meiryo, Helvetica, Arial, "游ゴシック", YuGothic, "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 	line-height: 6em;
 	outline: none;
-	cursor: pointer;
+    cursor: pointer;
+    -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+    user-select: none;
 }
 .button:hover,
 .button:focus {
@@ -99,7 +103,7 @@ body {
 	background: linear-gradient(to bottom, #ff063f, #ff376d);
 }
 .tweet {
-	display: inline-block;
+	display: block;
 	padding: .8em 3em;
 	background-color: #1da1f2;
 	color: #fff;
